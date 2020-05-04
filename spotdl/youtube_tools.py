@@ -295,6 +295,7 @@ class GenerateYouTubeURL:
                     )
                     duration_tolerance += 1
                     if duration_tolerance > max_duration_tolerance:
+                        log.error(self.meta_tags["duration"])
                         log.error(
                             "{0} by {1} was not found.".format(
                                 self.meta_tags["name"],
