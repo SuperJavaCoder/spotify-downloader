@@ -353,10 +353,10 @@ class GenerateYouTubeURL:
                 "videotime": videotime,
                 "seconds": internals.get_sec(videotime),
             }
-            if self.raw_song in title:
+            if self.meta_tags["name"] in title:
                 videos.append(youtubedetails)
                 log.error(title)
-        log.error(self.raw_song)
+        log.error(self.meta_tags["name"])
         if bestmatch:
             return self._best_match(videos)
 
@@ -399,7 +399,7 @@ class GenerateYouTubeURL:
                 "videotime": internals.videotime_from_seconds(duration_s),
                 "seconds": duration_s,
             }
-            if self.raw_song in x["snippet"]["title"]:
+            if self.meta_tags["name"] in x["snippet"]["title"]:
                 videos.append(youtubedetails)
          
         log.error("I'm hot")
