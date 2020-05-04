@@ -355,6 +355,7 @@ class GenerateYouTubeURL:
             }
             if self.raw_song in title:
                 videos.append(youtubedetails)
+            log.error(title)
         log.error("I'm hotter")
         if bestmatch:
             return self._best_match(videos)
