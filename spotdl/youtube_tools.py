@@ -397,6 +397,8 @@ class GenerateYouTubeURL:
                 "videotime": internals.videotime_from_seconds(duration_s),
                 "seconds": duration_s,
             }
+            if self.raw_song not in x["snippet"]["title"]:
+                continue
             videos.append(youtubedetails)
 
         if bestmatch:
