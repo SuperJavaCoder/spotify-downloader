@@ -354,7 +354,7 @@ class GenerateYouTubeURL:
                 "seconds": internals.get_sec(videotime),
             }
             videos.append(youtubedetails)
-
+        log.error("I'm hotter")
         if bestmatch:
             return self._best_match(videos)
 
