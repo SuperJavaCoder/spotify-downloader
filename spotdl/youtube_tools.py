@@ -353,7 +353,8 @@ class GenerateYouTubeURL:
                 "videotime": videotime,
                 "seconds": internals.get_sec(videotime),
             }
-            videos.append(youtubedetails)
+            if self.raw_song in title:
+                videos.append(youtubedetails)
         log.error("I'm hotter")
         if bestmatch:
             return self._best_match(videos)
@@ -397,7 +398,7 @@ class GenerateYouTubeURL:
                 "videotime": internals.videotime_from_seconds(duration_s),
                 "seconds": duration_s,
             }
-            if self.raw_song not in x["snippet"]["title"]:
+            if self.raw_song in x["snippet"]["title"]:
                 videos.append(youtubedetails)
          
         log.error("I'm hot")
