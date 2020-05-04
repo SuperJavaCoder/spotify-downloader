@@ -398,9 +398,9 @@ class GenerateYouTubeURL:
                 "seconds": duration_s,
             }
             if self.raw_song not in x["snippet"]["title"]:
-                continue
-            videos.append(youtubedetails)
-
+                videos.append(youtubedetails)
+         
+        log.error("I'm hot")
         if bestmatch:
             return self._best_match(videos)
 
